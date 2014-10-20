@@ -113,8 +113,8 @@ int main( int argc, char** argv )
 
 
     // Now it's time to load your module
-    boost::shared_ptr<Nao> nao = AL::ALModule::createModule<Nao>(broker, "Nao" );
-    nao->connect(n);
+    boost::shared_ptr<Nao> nao(new Nao( joint_names ));
+    nao->connect( broker, n );
     if(!nao->connected())
     {
         ROS_ERROR("Could not connect to Nao robot!");
@@ -125,17 +125,10 @@ int main( int argc, char** argv )
 
     nao->setStiffness( 1.0f );
 
-    if(broker->isModulePresent("Nao"))
-        ROS_INFO("Nao Module loaded succesfully!");
-    else
-    {
-        ROS_ERROR("Nao Module is not loaded!");
-        return -1;
-    }
-
     nao->run();
 
     nao->setStiffness ( 0.0f );
+    
     spinner.stop();
 
     AL::ALBrokerManager::getInstance()->killAllBroker();
