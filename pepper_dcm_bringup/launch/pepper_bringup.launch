@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+ 	<!-- Call Nao Robot publisher -->
+  <include file="$(find pepper_description)/launch/pepper_upload.launch" />
+
+  <!-- Call Nao Robot Trajectory Controller -->
+  <include file="$(find pepper_dcm_controllers)/launch/pepper_default_controllers.launch"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        respawn="false" output="screen">
+        <!--<remap from="/joint_states" to="/nao_dcm/joint_states" /> -->
+  </node>
+
+  <!-- Call Nao Robot Driver -->
+  <node pkg="pepper_dcm_driver" type="pepper_dcm_driver" name="pepper_dcm_driver" respawn="false" output="screen" >
+    <!--<remap from="/joint_states" to="/nao_dcm/joint_states"/>-->
+    <!--<remap from="/controller_manager" to="/nao_dcm/controller_manager"/>-->
+
+    <!-- Load configurations from YAML file to parameter server -->
+    <rosparam file="$(find pepper_dcm_bringup)/config/pepper_dcm.yaml" command="load"/>
+
+    <!-- Specify Robot Body Type on Parameter Server -->
+    <param name="BodyType" value="H25"/>
+  </node>
+	
+</launch>
