@@ -30,7 +30,7 @@ Nao::Nao(  const std::vector< std::string > &joint_names ):
       is_connected_( false ),
       joint_names_(joint_names)
 {
-   
+
 }
 
 Nao::~Nao()
@@ -164,7 +164,7 @@ bool Nao::connect(const boost::shared_ptr<AL::ALBroker> &broker,
 
     // Load ROS Parameters
     loadParams();
-    
+
     // Initialize Memory Proxy
     try
     {
