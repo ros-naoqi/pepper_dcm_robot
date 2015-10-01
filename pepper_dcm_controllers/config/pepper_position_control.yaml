@@ -61,52 +61,26 @@ nao_dcm:
     type: position_controllers/JointPositionController
     joint: RElbowRoll
 
-  LHipYawPitch_position_controller:
+  HipRoll_position_controller:
     type: position_controllers/JointPositionController
-    joint: LHipYawPitch
+    joint: HipRoll
 
-  LHipRoll_position_controller:
+  HipPitch_position_controller:
     type: position_controllers/JointPositionController
-    joint: LHipRoll
+    joint: HipPitch
 
-  LHipPitch_position_controller:
+  KneePitch_position_controller:
     type: position_controllers/JointPositionController
-    joint: LHipPitch
-
-  LKneePitch_position_controller:
+    joint: KneePitch
+    
+  WheelB_position_controller:
     type: position_controllers/JointPositionController
-    joint: LKneePitch
-
-  LAnklePitch_position_controller:
+    joint: WheelB
+    
+  WheelFL_position_controller:
     type: position_controllers/JointPositionController
-    joint: LAnklePitch
-
-  LAnkleRoll_position_controller:
+    joint: WheelFL
+    
+  WheelFR_position_controller:
     type: position_controllers/JointPositionController
-    joint: LAnkleRoll
-
-  RHipYawPitch_position_controller:
-    type: position_controllers/JointPositionController
-    joint: RHipYawPitch
-
-  RHipRoll_position_controller:
-    type: position_controllers/JointPositionController
-    joint: RHipRoll
-
-  RHipPitch_position_controller:
-    type: position_controllers/JointPositionController
-    joint: RHipPitch
-
-  RKneePitch_position_controller:
-    type: position_controllers/JointPositionController
-    joint: RKneePitch
-
-  RAnklePitch_position_controller:
-    type: position_controllers/JointPositionController
-    joint: RAnklePitch
-
-  RAnkleRoll_position_controller:
-    type: position_controllers/JointPositionController
-    joint: RAnkleRoll
-
-
+    joint: WheelFR

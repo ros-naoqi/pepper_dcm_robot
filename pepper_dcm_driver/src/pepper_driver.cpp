@@ -37,7 +37,7 @@ int main( int argc, char** argv )
 {
     int pport = 9559;
     string pip = "127.0.0.1";
-    ros::init(argc, argv, "nao_dcm_driver");
+    ros::init(argc, argv, "pepper_dcm_driver");
     ros::NodeHandle n;
     ros::NodeHandle n_p("~");
     if(!ros::master::check())
@@ -63,8 +63,8 @@ int main( int argc, char** argv )
         // filter out non-actuated joints
         if (it->second.segment.getJoint().getType() != KDL::Joint::None)
         {
-          ROS_INFO_STREAM("joint found: " << it->second.segment.getJoint().getName()
-                          << it->second.segment.getJoint().getType()) ;
+          ROS_INFO_STREAM("joints found: " << it->second.segment.getJoint().getName()
+                          << " " << it->second.segment.getJoint().getType()) ;
           joint_names.push_back(it->second.segment.getJoint().getName());
           }
       }
@@ -77,7 +77,7 @@ int main( int argc, char** argv )
     }
 
     // A broker needs a name, an IP and a port:
-    string broker_name = "Nao Driver Broker";
+    string broker_name = "Pepper Driver Broker";
     // FIXME: would be a good idea to look for a free port first
     int broker_port = 54000;
     // listen port of the broker (here an anything)

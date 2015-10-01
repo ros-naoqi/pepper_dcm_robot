@@ -56,10 +56,13 @@ bool Nao::initialize()
                             "RElbowYaw",
                             "RElbowRoll",
                             "RWristYaw",
-                            "RHand",
+                            "RHand"/*,
                             "KneePitch",
                             "HipRoll",
-                            "HipPitch"
+                            "HipPitch",
+                            "WheelB",
+                            "WheelFL",
+                            "WheelFR"*/
                             };
     joint_names_ = vector<string>(joint, end(joint));
 
@@ -68,7 +71,7 @@ bool Nao::initialize()
         joints_names_.push_back("Device/SubDeviceList/"+(*it)+"/Position/Sensor/Value");
     }
     number_of_joints_ = joint_names_.size();
-
+ROS_INFO_STREAM(" ---------number_of_joints_=" << number_of_joints_);
     // DCM Motion Commands Initialization
     try
     {

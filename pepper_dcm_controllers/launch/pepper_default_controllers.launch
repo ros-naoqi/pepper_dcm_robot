@@ -5,15 +5,18 @@
   <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find pepper_dcm_controllers)/config/pepper_trajectory_controllers.yaml" command="load"/>
+  <rosparam file="$(find pepper_dcm_controllers)/config/pepper_trajectory_control_H21.yaml" command="load"/>
 
   <!-- load the controllers -->
   <node name="default_controllers_spawner" pkg="controller_manager"
         type="spawner" respawn="false" output="screen"
-        args="joint_state_controller
-              head_controller
-              right_arm_controller
-              left_arm_controller
-              torso_controller" />
+        args="/nao_dcm/joint_state_controller
+              /nao_dcm/Head_controller
+              /nao_dcm/RightArm_controller 
+              /nao_dcm/LeftArm_controller
+              /nao_dcm/LeftHand_controller
+              /nao_dcm/RightHand_controller" />
+
+              <!-- /nao_dcm/Pelvis_controller -->
 
 </launch>
