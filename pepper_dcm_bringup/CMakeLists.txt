@@ -6,7 +6,7 @@ find_package(catkin REQUIRED)
 find_package(Boost)
 
 ##Needed for ros packages
-catkin_package(CATKIN_DEPENDS rospy pepper_dcm_driver)
+catkin_package(CATKIN_DEPENDS rospy naoqi_dcm_driver)
 
 install(DIRECTORY launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

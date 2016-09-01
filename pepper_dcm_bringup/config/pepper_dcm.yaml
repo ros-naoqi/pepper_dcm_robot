@@ -1,6 +1,6 @@
 # DO NOT CHANGE IT
 #
-Version: Pepper
+Version: 1.0
 
 # Camera related parameters
 UseCamera: true
@@ -19,16 +19,10 @@ CameraBrokerPort: 54001
 CameraBrokerIP: 0.0.0.0
 
 # Communication related parameters
-HighCommunicationFrequency: 15
-LowCommunicationFrequency: 10
 # 100Hz are perfect for Webots, 5-10Hz works really beautiful on my real Nao
 ControllerFrequency: 10
 CameraFrequency: 15
 
 # Robot related parameters
-JointPrecision: 0.00174532925
+JointPrecision: 0.09
 OdomFrame: odom
-
-# DO NOT CHANGE IT
-#Prefix: pepper_dcm
-#Prefix: ""

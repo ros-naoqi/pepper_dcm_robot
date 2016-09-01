@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+ 	<!-- Call Nao Robot publisher -->
+  <include file="$(find pepper_description)/launch/pepper_upload.launch" />
+
+  <!-- Call Nao Robot Trajectory Controller -->
+  <include file="$(find pepper_control)/launch/pepper_control_position.launch"/>
+
+  <!-- Call Nao Robot Driver -->
+  <node pkg="pepper_dcm_driver" type="pepper_dcm_driver" name="pepper_dcm_driver" respawn="false" output="screen" >
+    <!-- Load configurations from YAML file to parameter server -->
+    <rosparam file="$(find pepper_dcm_bringup)/config/pepper_dcm.yaml" command="load"/>
+  </node>
+	
+</launch>
