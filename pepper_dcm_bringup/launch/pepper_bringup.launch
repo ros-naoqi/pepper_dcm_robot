@@ -20,7 +20,8 @@
     <param name="DriverBrokerIP"      value="$(arg roscore_ip)" />
     <param name="network_interface"   value="$(arg network_interface)" />
     <param name="Prefix"              value="pepper_dcm" />
-    <param name="motor_groups"        value="" /> <!-- Body -->
+    <param name="motor_groups"        value="LArm, RArm" /> <!-- either "Body" or "LArm, RArm" by default-->
+    <param name="use_dcm"             value="false" />
   </node>
 	
 </launch>
