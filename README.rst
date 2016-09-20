@@ -9,31 +9,27 @@ Installation
 
 .. code-block:: bash
 
-        sudo apt-get install ros-indigo-pepper-robot ros-indigo-pepper-meshes ros-indigo-pepper-control
+        sudo apt-get install ros-indigo-pepper-robot ros-indigo-pepper-meshes ros-indigo-pepper-control ros-indigo-naoqi-dcm-driver
 
-- clone and compile `naoqi_dcm_driver <https://github.com/ros-aldebaran/naoqi_dcm_driver>`_
+- then, install pepper_dcm_bringup or compile it from source
 
-- then, clone the code from `pepper_dcm_bringup <http://wiki.ros.org/pepper_dcm_bringup>`_ and compile
+.. code-block:: bash
 
-- optionally, install `pepper_moveit_config <http://wiki.ros.org/pepper_moveit_config>`_
+        sudo apt-get install ros-indigo-pepper-dcm-robot
+
+- optionally, install pepper_moveit_config
+
+.. code-block:: bash
+
+        sudo apt-get install ros-indigo-pepper-moveit-config
 
 How to use it
 -------------
 
-To command your robot remotely with ros control : 
+To command your robot remotely with Ros control:
 
-- first, turn off Autonomous Life on your robot. You can do it either in Choregraphe or by restarting Naoqi, like this:
-
-.. code-block:: bash
-
-        ssh nao@<YOUR_ROBOT_IP>
-
-        nao stop
-
-        naoqi-bin --disable-life
+- be aware that the package will stop Autonomous Life on your robot.
     
-- wake up your robot
-
 - export your robot IP address
 
 .. code-block:: bash
