@@ -20,7 +20,7 @@ CameraBrokerIP: 0.0.0.0
 
 # Communication related parameters
 # 100Hz are perfect for Webots, 5-10Hz works really beautiful on my real Nao
-ControllerFrequency: 20
+ControllerFrequency: 12
 CameraFrequency: 15
 
 # Robot related parameters
