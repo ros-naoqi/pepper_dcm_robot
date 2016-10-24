@@ -15,6 +15,7 @@
   <node pkg="naoqi_dcm_driver" type="naoqi_dcm_driver" name="naoqi_dcm_driver" respawn="false" output="screen" >
     <!-- Load configurations from YAML file to parameter server -->
     <rosparam file="$(find pepper_dcm_bringup)/config/pepper_dcm.yaml" command="load"/>
+    <rosparam file="$(find pepper_control)/config/pepper_trajectory_control.yaml" command="load"/>
     <param name="RobotIP"             value="$(arg robot_ip)" />
     <param name="RobotPort"           value="$(arg robot_port)" />
     <param name="DriverBrokerIP"      value="$(arg roscore_ip)" />
