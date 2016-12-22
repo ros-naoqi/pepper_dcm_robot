@@ -2,8 +2,8 @@
 Changelog for package pepper_dcm_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2016-12-22)
+------------------
 * Updating the version
 * changes in the launch file to be able to read controllers' joints
 * smooth motion
