@@ -5,13 +5,13 @@
   <arg name="roscore_ip"        default="127.0.0.1" />
   <arg name="network_interface" default="eth0" />
 
- 	<!-- Call Nao Robot publisher -->
+ 	<!-- Call Robot publisher -->
   <include file="$(find pepper_description)/launch/pepper_upload.launch" />
 
-  <!-- Call Nao Robot Trajectory Controller -->
+  <!-- Call Robot Trajectory Controller -->
   <include file="$(find pepper_control)/launch/pepper_control_trajectory.launch"/>
 
-  <!-- Call Nao Robot Driver -->
+  <!-- Call Robot Driver -->
   <node pkg="naoqi_dcm_driver" type="naoqi_dcm_driver" name="naoqi_dcm_driver" respawn="false" output="screen" >
     <!-- Load configurations from YAML file to parameter server -->
     <rosparam file="$(find pepper_dcm_bringup)/config/pepper_dcm.yaml" command="load"/>
