@@ -23,6 +23,7 @@
     <param name="Prefix"              value="pepper_dcm" />
     <param name="motor_groups"        value="Head LArm RArm" /> <!-- either "Body" or separate groups in the order "Head LArm RArm" -->
     <param name="use_dcm"             value="false" />
+    <param name="max_stiffness"       value="0.9" />
   </node>
 	
 </launch>
