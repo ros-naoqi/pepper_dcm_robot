@@ -15,7 +15,7 @@ Installation
 
 .. code-block:: bash
 
-        sudo apt-get install ros-indigo-pepper-dcm-robot
+        sudo apt-get install ros-indigo-pepper-dcm-bringup
 
 - optionally, install pepper_moveit_config
 
