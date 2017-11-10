@@ -30,19 +30,19 @@ To command your robot remotely with Ros control:
 
 - be aware that the package will stop Autonomous Life on your robot.
     
-- export your robot IP address
+- start the DCM bringup proving your robot's IP
 
 .. code-block:: bash
 
-        export NAO_IP=<your_robot_ip>
+        roslaunch pepper_dcm_bringup pepper_bringup.launch robot_ip:=<ROBOT_IP>
 
-- then, start the DCM bringup
+- start Naoqi Driver (to get the odom frame) proving your robot's IP
 
 .. code-block:: bash
 
-        roslaunch pepper_dcm_bringup pepper_bringup.launch
+        roslaunch roslaunch naoqi_driver naoqi_driver.launch nao_ip:=<ROBOT_IP>
 
-- you can control the robot using Moveit! (install it previously)
+- then, you could either start Moveit! to control the robots' arms via GUI
 
 .. code-block:: bash
 
