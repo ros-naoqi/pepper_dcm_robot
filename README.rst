@@ -40,7 +40,7 @@ To command your robot remotely with Ros control:
 
 .. code-block:: bash
 
-        roslaunch roslaunch naoqi_driver naoqi_driver.launch nao_ip:=<ROBOT_IP>
+        roslaunch naoqi_driver naoqi_driver.launch nao_ip:=<ROBOT_IP>
 
 - then, you could either start Moveit! to control the robots' arms via GUI
 
