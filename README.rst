@@ -26,11 +26,11 @@ Installation
 How to use it
 -------------
 
-To command your robot remotely with ROS control:
+**Trajectory control**
 
-- be aware that the package will stop Autonomous Life on your robot.
+To command your robot remotely with ROS control:
     
-- start the DCM bringup proving your robot's IP
+- start the DCM bringup proving your robot's IP (be aware that the package will stop Autonomous Life on your robot)
 
 .. code-block:: bash
 
@@ -54,7 +54,7 @@ To command your robot remotely with ROS control:
 
         rosrun actionlib axclient.py <name of the goal topic of the action server>
 
-        example:
+example:
 
 .. code-block:: bash
 
@@ -63,3 +63,19 @@ To command your robot remotely with ROS control:
 To choose the controllers you want to load, modify pepper_control/launch/pepper_control_trajectory.launch.
 The list of implemented controllers, you can find in pepper_control/config/pepper_trajectory_control.yaml. 
 You can start and stop the ros-controllers using the rqt plugin ControllerManager.
+
+** Position control **
+
+To command joints positions via ROS:
+
+- start the DCM bringup proving your robot's IP (be aware that the package will stop Autonomous Life on your robot):
+
+.. code-block:: bash
+
+        roslaunch pepper_dcm_bringup pepper_dcm_bringup_position.launch robot_ip:=<ROBOT_IP>
+
+- send a position to the desired controller, for example
+
+.. code-block:: bash
+
+        rostopic pub /pepper_dcm/HeadYaw_position_controller/command std_msgs/Float64 "data: 1"
