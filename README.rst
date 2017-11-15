@@ -26,7 +26,7 @@ Installation
 How to use it
 -------------
 
-To command your robot remotely with Ros control:
+To command your robot remotely with ROS control:
 
 - be aware that the package will stop Autonomous Life on your robot.
     
