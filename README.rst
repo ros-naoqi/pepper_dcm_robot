@@ -64,7 +64,7 @@ To choose the controllers you want to load, modify pepper_control/launch/pepper_
 The list of implemented controllers, you can find in pepper_control/config/pepper_trajectory_control.yaml. 
 You can start and stop the ros-controllers using the rqt plugin ControllerManager.
 
-** Position control **
+**Position control**
 
 To command joints positions via ROS:
 
