@@ -11,13 +11,13 @@ Installation
 
         sudo apt-get install ros-indigo-pepper-robot ros-indigo-pepper-meshes ros-indigo-pepper-control ros-indigo-naoqi-dcm-driver
 
-- then, install pepper_dcm_bringup or compile it from source
+- then, install `pepper_dcm_bringup <https://github.com/ros-naoqi/pepper_dcm_robot>`_ or compile it from source
 
 .. code-block:: bash
 
         sudo apt-get install ros-indigo-pepper-dcm-bringup
 
-- optionally, install pepper_moveit_config
+- optionally, install `pepper_moveit_config <https://github.com/ros-naoqi/pepper_moveit_config>`_
 
 .. code-block:: bash
 
