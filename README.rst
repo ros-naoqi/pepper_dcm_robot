@@ -42,13 +42,20 @@ To command your robot remotely with ROS control:
 
         roslaunch naoqi_driver naoqi_driver.launch nao_ip:=<ROBOT_IP>
 
-- then, you could either start Moveit! to control the robots' arms via GUI
+*Control via MoveIt*
+
+- start Moveit! to control the robot via GUI
 
 .. code-block:: bash
 
         roslaunch pepper_moveit_config moveit_planner.launch
 
-- or you can send a trajectory to the desired controller (actionlib)
+- check "Allow approximate IK solutions"
+- control a planning_group via an interactive marker 
+
+*Control via Actionlib*
+
+- you can send a trajectory to the desired controller (actionlib)
 
 .. code-block:: bash
 
