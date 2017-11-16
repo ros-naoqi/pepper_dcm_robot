@@ -2,6 +2,9 @@
 Changelog for package pepper_dcm_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.4 (2017-11-16)
 ------------------
 * adding a dependency on pepper_control
