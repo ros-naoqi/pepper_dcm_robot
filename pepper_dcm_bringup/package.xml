@@ -39,5 +39,6 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISE
 
   <run_depend>rospy</run_depend>
   <run_depend>naoqi_dcm_driver</run_depend>
+  <run_depend>pepper_control</run_depend>
 
 </package>
