@@ -2,6 +2,18 @@
 Changelog for package pepper_dcm_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* adding a dependency on pepper_control
+* fixing pepper_dcm_bringup_position.launch
+* cleaning the config file
+* adding max_stiffness parameter
+* adding head control
+* typos
+* typos
+* typos
+* Contributors: Natalia Lyubova
+
 0.0.3 (2016-12-22)
 ------------------
 * Updating the version
